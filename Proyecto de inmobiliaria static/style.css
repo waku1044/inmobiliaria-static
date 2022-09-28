@@ -24,6 +24,9 @@
 	width: 50px;
 	cursor: pointer;
 }
+img{
+	border-radius: 10px;
+}
 #fle-left{
 	left: -50px;
 
@@ -45,4 +48,58 @@
 #imgright{
 	position: absolute;
 	right: 0;
+}
+.coment{
+	text-align: center;
+	width: 30%;
+	position: absolute;
+	bottom: -20px;
+}
+#boxInput{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+#inputBuscar{
+	width: 40%;
+	border: none;
+	border-bottom: 1px solid #000;
+
+	
+}
+
+#lupita{
+	align-self: stretch;
+	position: absolute;
+	height:23px;
+	right: 270px;
+	/*top: 2px;	*/
+}
+.hidden{
+	display: none;
+}
+.muestra{
+	display: flex;
+	justify-content: space-around;
+
+	margin-right: 10px;
+	width: 100px;
+	height: 30px;
+	border-bottom: 3px solid #E0B067;
+}
+
+.equis{
+	position: relative;
+	top: 2px;
+	right: -10px;
+	cursor: pointer;
+}
+#pestaña p{
+	text-transform: capitalize;
+	font-family: serif;
+	font-size: 1.1em;
+	
 }
