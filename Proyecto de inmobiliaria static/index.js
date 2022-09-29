@@ -92,7 +92,7 @@ function next() {
 
 // En Buscador
 const palabrasClaves = ['alquilar', 'comprar', '1 dormitorio', '2 dormitorio', '3 dormitorio', ]
-const inputBuscar = document.querySelector('#inputBuscar');
+const inputBuscar = document.querySelector('#inputBuscar').toLowerCase();
 const lupita = document.querySelector('#lupita');
 lupita.addEventListener('click', lupa)
 const equis = document.querySelector('.equis');
