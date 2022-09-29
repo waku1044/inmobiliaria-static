@@ -113,7 +113,7 @@ function lupa() {
     let top = document.querySelector('#top');
     if (inputBuscar.value === 'alquilar') {
         inputBuscar.value = '';
-        inputBuscar.setAttribute('placeholder', 'Cuantos dormitoris necesitas?');
+        inputBuscar.setAttribute('placeholder', 'Cuantos dormitorios necesitas?');
         top.innerHTML = template;
     } else {
         inputBuscar.value = 'No coinside';
