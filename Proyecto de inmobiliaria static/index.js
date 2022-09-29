@@ -98,25 +98,126 @@ lupita.addEventListener('click', lupa)
 const equis = document.querySelector('.equis');
 equis.addEventListener('click', borrar)
 
-// FUNCIONE
-function borrar(e){
-	e.parentNode.remove()
+// FUNCIONES
+function borrar(e) {
+    e.parentNode.remove()
 }
 
 
+// Respuesta1 alquilar o comprar
+function alquilar(input) {
+    let top = document.querySelector('#top');
+    let template = `<div class='muestra' id='pestaña'>
+            <p>${inputBuscar.value}</p><svg xmlns="http://www.w3.org/2000/svg" onclick='borrar(this)' class='bi bi-x-lg equis' width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </div>`;
+    switch (input) {
+        case 'alquilar':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', 'Cuántos dormitorios necesitas?');
+            top.innerHTML += template;
+            break;
+        case 'comprar':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', 'Cuántos dormitorios necesitas?');
+            top.innerHTML += template;
+            break;
+        default:
+            inputBuscar.value = 'No coinside';
+            setTimeout(() => { inputBuscar.value = '' }, 2000)
+    }
+
+}
+// Respuesta2  dormitorios
+function dormitorios(dormitorio) {
+    let top = document.querySelector('#top');
+    let template = `<div class='muestra dormitorios' id='pestaña'><svg xmlns="http://www.w3.org/2000/svg" class="ionicon bed" viewBox="0 0 512 512"><title>Bed</title><path d="M384 240H96V136a40.12 40.12 0 0140-40h240a40.12 40.12 0 0140 40v104zM48 416V304a64.19 64.19 0 0164-64h288a64.19 64.19 0 0164 64v112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M48 416v-8a24.07 24.07 0 0124-24h368a24.07 24.07 0 0124 24v8M112 240v-16a32.09 32.09 0 0132-32h80a32.09 32.09 0 0132 32v16M256 240v-16a32.09 32.09 0 0132-32h80a32.09 32.09 0 0132 32v16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+            <p>${inputBuscar.value}</p><svg xmlns="http://www.w3.org/2000/svg" onclick='borrar(this)' class='bi bi-x-lg equis' width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </div>`;
+    switch (dormitorio) {
+        case '1 dormitorio':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', 'En qué zona te gustaria buscar?');
+            top.innerHTML += template;
+            break;
+        case '2 dormitorios':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', 'En qué zona te gustaria buscar?');
+            top.innerHTML += template;
+            break;
+        case '3 dormitorios':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', 'En qué zona te gustaria buscar?');
+            top.innerHTML += template;
+            break;
+        default:
+            inputBuscar.value = 'No coinside';
+            setTimeout(() => { inputBuscar.value = '' }, 2000);
+
+
+    }
+}
+
+// Respuesta3 Zona
+function zona(input) {
+    let top = document.querySelector('#top');
+    let template = `<div class='muestra zona' id='pestaña'><svg xmlns="http://www.w3.org/2000/svg" class="ionicon brujula" viewBox="0 0 512 512"><title>Compass</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path d="M350.67 150.93l-117.2 46.88a64 64 0 00-35.66 35.66l-46.88 117.2a8 8 0 0010.4 10.4l117.2-46.88a64 64 0 0035.66-35.66l46.88-117.2a8 8 0 00-10.4-10.4zM256 280a24 24 0 1124-24 24 24 0 01-24 24z"/></svg>
+            <p>${inputBuscar.value}</p><svg xmlns="http://www.w3.org/2000/svg" onclick='borrar(this)' class='bi bi-x-lg equis' width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </div>`;
+    switch (input) {
+        case 'norte':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', '¿Tipo de vivienda?');
+            top.innerHTML += template;
+            break;
+        case 'sur':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', '¿Tipo de vivienda?');
+            top.innerHTML += template;
+            break;
+        case 'este':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', '¿Tipo de vivienda?');
+            top.innerHTML += template;
+            break;
+        case 'oeste':
+            inputBuscar.value = '';
+            inputBuscar.setAttribute('placeholder', '¿Tipo de vivienda?');
+            top.innerHTML += template;
+            break;
+        default:
+            inputBuscar.value = 'No coinside';
+            setTimeout(() => { inputBuscar.value = '' }, 2000);
+
+    }
+
+}
+
+
+
+
+
 function lupa() {
-	const template = `<div class='muestra' id='pestaña'>
+    let template = `<div class='muestra' id='pestaña'>
             <p>${inputBuscar.value}</p><svg xmlns="http://www.w3.org/2000/svg" onclick='borrar(this)' class='bi bi-x-lg equis' width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
             </svg>
         </div>`;
     let top = document.querySelector('#top');
-    if (inputBuscar.value === 'alquilar') {
-        inputBuscar.value = '';
-        inputBuscar.setAttribute('placeholder', 'Cuantos dormitorios necesitas?');
-        top.innerHTML = template;
-    } else {
-        inputBuscar.value = 'No coinside';
+    if (inputBuscar.value === 'alquilar' || inputBuscar.value === 'comprar') {
+        alquilar(inputBuscar.value);
+    } else if (inputBuscar.value === '1 dormitorio' || inputBuscar.value === '2 dormitorios' || inputBuscar.value === '3 dormitorios') {
+        dormitorios(inputBuscar.value);
+    }else if (inputBuscar.value === 'norte' || inputBuscar.value === 'sur' || inputBuscar.value === 'este' || inputBuscar.value === 'oeste'){
+        zona(inputBuscar.value)
+    } 
+    else {
+        inputBuscar.value = 'No coincide';
         setTimeout(() => { inputBuscar.value = '' }, 2000);
     }
 }

@@ -67,6 +67,7 @@ img{
 	width: 40%;
 	border: none;
 	border-bottom: 1px solid #000;
+	text-transform: capitalize;
 
 	
 }
@@ -102,4 +103,31 @@ img{
 	font-family: serif;
 	font-size: 1.1em;
 	
+}
+.bed{
+	position: relative;
+	left: -20px;
+	top: 2px;
+
+}
+.dormitorios p{
+	position: relative;
+	left: -20px;
+	display: block;
+}
+.dormitorios{
+	width: 195px;
+}
+.zona{
+	position: relative;
+	width: 100px;
+}
+.zona p{
+	position: relative;
+	left: 10px;
+}
+.brujula{
+	position: absolute;
+	left: -15px;
+	top: 2px;
 }
