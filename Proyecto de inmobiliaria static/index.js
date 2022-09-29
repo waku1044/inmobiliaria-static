@@ -209,7 +209,7 @@ function lupa() {
             </svg>
         </div>`;
     let top = document.querySelector('#top');
-    if (inputBuscar.value === 'alquilar' || inputBuscar.value === 'comprar') {
+    if (inputBuscar.value === 'alquilar' || 'comprar') {
         alquilar(inputBuscar.value);
     } else if (inputBuscar.value === '1 dormitorio' || inputBuscar.value === '2 dormitorios' || inputBuscar.value === '3 dormitorios') {
         dormitorios(inputBuscar.value);
