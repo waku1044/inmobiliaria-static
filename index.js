@@ -150,7 +150,8 @@ function zona() {
 
 
 function lupa() {
-   let tipeo = inputBuscar.value.toLowerCase();
+   let tipeo = inputBuscar.value;
+   tipeo.to.LowerCase();
    console.log(tipeo)
     if (tipeo.trim() === 'alquilar' || tipeo.trim() === 'comprar') {
         alquilar();
