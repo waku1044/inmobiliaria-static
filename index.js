@@ -96,9 +96,9 @@ const inputBuscar = document.querySelector('#inputBuscar')
 const lupita = document.querySelector('#lupita');
 lupita.addEventListener('click', lupa)
 const equis = document.querySelector('.equis');
-equis.addEventListener('click', borrar)
-
+// equis.addEventListener('click', borrar)
 // FUNCIONES
+
 function borrar(e) {
     e.parentNode.remove()
 }
@@ -204,6 +204,7 @@ function zona(input) {
 
 function lupa() {
    let tipeo = inputBuscar.value.toLowerCase();
+   console.log(tipeo)
     if (tipeo.trim() === 'alquilar' || 'comprar') {
         alquilar(tipeo);
     } else if (inputBuscar.value === '1 dormitorio' || inputBuscar.value === '2 dormitorios' || inputBuscar.value === '3 dormitorios') {
